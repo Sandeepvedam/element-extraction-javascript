@@ -39,7 +39,9 @@ function extractElements(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {// when loaded
 
+            console.log(this.responseText);
             var dom = buildDom(this.responseText);
+
 
             traverseElement(dom) ;// and traverse it
         }
